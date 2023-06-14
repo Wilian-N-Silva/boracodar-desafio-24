@@ -1,0 +1,22 @@
+#app {
+  background-color: #151515;
+  width: 100%;
+  max-width: 430px;
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  & h1 {
+    font: $heading1;
+    color: #fff;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 430px) {
+    height: 90vh;
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,93 @@
+:root {
+  --default-thumb-color: #151515;
+  --hue-thumb-color: #151515;
+}
+
+.picker {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+
+  & input {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    align-self: center;
+    width: 100%;
+
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      height: 5px;
+      border-radius: 25px;
+    }
+
+    &::-moz-range-track {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      height: 5px;
+      border-radius: 25px;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      aspect-ratio: 1/1;
+      border: 2px solid #fff;
+      cursor: pointer;
+      border-radius: 50%;
+      transform: translateY(-25%);
+      background-color: var(--default-thumb-color);
+      transform-origin: 50% 100%;
+      transition: all .3s;
+    }
+
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      aspect-ratio: 1/1;
+      border: 2px solid #fff;
+      cursor: pointer;
+      border-radius: 50%;
+      transform: translateY(-25%);
+      background-color: var(--default-thumb-color);
+      transform-origin: -25%;
+    }
+
+    &::-webkit-slider-thumb:hover {
+      transform: scale(1.5);
+    }
+
+    &::-moz-range-thumb:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  &--hue {
+    & input {
+      &::-webkit-slider-runnable-track {
+        background: -webkit-linear-gradient(left, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255), rgb(255, 0, 0));
+        height: 5px;
+      }
+
+      &::-moz-range-track {
+        background: -webkit-linear-gradient(left, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255), rgb(255, 0, 0));
+        height: 5px;
+      }
+
+      &::-webkit-slider-thumb {
+        background-color: var(--hue-thumb-color);
+      }
+
+      &::-moz-range-thumb {
+        background-color: var(--hue-thumb-color);
+      }
+    }
+  }
+
+}
