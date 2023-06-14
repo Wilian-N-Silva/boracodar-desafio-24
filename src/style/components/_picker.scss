@@ -14,6 +14,7 @@
     appearance: none;
     border-radius: 50%;
     align-self: center;
+    height: 5px;
     width: 100%;
 
     &::-webkit-slider-runnable-track {
@@ -54,9 +55,9 @@
       border: 2px solid #fff;
       cursor: pointer;
       border-radius: 50%;
-      transform: translateY(-25%);
       background-color: var(--default-thumb-color);
-      transform-origin: -25%;
+      transform-origin: 50% 50%;
+      transition: all .3s;
     }
 
     &::-webkit-slider-thumb:hover {
